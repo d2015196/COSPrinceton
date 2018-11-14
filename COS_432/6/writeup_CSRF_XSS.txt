@@ -1,0 +1,7 @@
+Improvements for CSRF protection: 
+
+Under csrfdefense = 1, tokens were not reissued whenever subsequent requests were made. When opening the home page multiple times, the csrf_token cookie had the same values. To avoid an attack similar to the one in (2.1) in which the injected code issues a GET request to the home page to get csrf_token values, the tokens should be changed every time. 
+
+Also the response to GET/POST request should be encoded. An attack against csrfdefense=1 was possibble because the form that the server returned contained a field, despite being hidden, that was named "csrf_token". This content should not be visible to an attacker. 
+
+To prevent attacks against csrfdefence=1 through payload injection "sanitizing" input fields should be done. Remove [script, ', ", ;] and other tags as speciied in conditions xss_defense = 1, 2, 3. 

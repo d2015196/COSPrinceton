@@ -1,0 +1,351 @@
+Assessment Summary
+Compilation:  PASSED
+Style:        FAILED
+Findbugs:     Potential bugs found.
+API:          PASSED
+Correctness:  13/21 tests passed
+Memory:       No tests available for autograding.
+Timing:       No tests available for autograding.
+Assessment Details
+files submitted
+----------------------------------
+total 166K
+-rw-r-----. 1 4.8K Oct 11 17:28 KeyExchange.java
+-rw-r-----. 1  17K Oct 11 17:42 RSAKey.java
+-rw-r-----. 1 2.2K Oct 11 17:29 RSAKeyPair.java
+******************************************************************************
+*  compiling
+******************************************************************************
+% javac RSAKeyPair.java
+*-----------------------------------------------------------
+================================================================
+% javac RSAKey.java
+*-----------------------------------------------------------
+================================================================
+% javac KeyExchange.java
+*-----------------------------------------------------------
+================================================================
+% checkstyle *.java
+*-----------------------------------------------------------
+RSAKeyPair.java:2:8: Unused import - java.nio.ByteBuffer.
+RSAKeyPair.java:14:3: File contains tab characters (this is the first instance).
+RSAKeyPair.java:19:28: Name 'p_minus_1' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+RSAKeyPair.java:20:28: Name 'q_minus_1' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+RSAKeyPair.java:21:28: Name 'product_minus_1' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+RSAKey.java:3:8: Unused import - java.nio.ByteBuffer.
+RSAKey.java:12:5: Static variable definition in wrong order.
+RSAKey.java:12:5: Variable access definition in wrong order.
+RSAKey.java:13:5: Static variable definition in wrong order.
+RSAKey.java:13:5: Variable access definition in wrong order.
+RSAKey.java:14:5: Static variable definition in wrong order.
+RSAKey.java:14:5: Variable access definition in wrong order.
+RSAKey.java:16:5: Static variable definition in wrong order.
+RSAKey.java:16:5: Variable access definition in wrong order.
+RSAKey.java:18:5: Static variable definition in wrong order.
+RSAKey.java:18:5: Variable access definition in wrong order.
+RSAKey.java:21:5: Static variable definition in wrong order.
+RSAKey.java:21:5: Variable access definition in wrong order.
+RSAKey.java:21:23: Name 'B1_in_bytes' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+RSAKey.java:21:23: Variable 'B1_in_bytes' must be private and have accessor methods.
+RSAKey.java:24:5: Static variable definition in wrong order.
+RSAKey.java:24:5: Variable access definition in wrong order.
+RSAKey.java:24:23: Name 'B0_in_bytes' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+RSAKey.java:24:23: Variable 'B0_in_bytes' must be private and have accessor methods.
+RSAKey.java:27:17: Name 'size_modulus' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+RSAKey.java:41:5: Static variable definition in wrong order.
+RSAKey.java:41:5: Variable access definition in wrong order.
+RSAKey.java:41:29: Name 'hash_function' must match pattern '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.
+RSAKey.java:54:16: Name 'modulus_byte' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+RSAKey.java:91:13: Name 'oaepBlock_length' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+RSAKey.java:101:15: 'return' is not followed by whitespace.
+RSAKey.java:128:54: Name 'pad_length' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z]$'.
+RSAKey.java:132:15: 'return' is not followed by whitespace.
+RSAKey.java:136:54: Name 'pad_length' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z]$'.
+RSAKey.java:140:15: 'return' is not followed by whitespace.
+RSAKey.java:145:27: Name 'xor_ByteArrays_sameSize' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+RSAKey.java:154:28: 'cast' is not followed by whitespace.
+RSAKey.java:218:16: Name 'random_seed_array' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+RSAKey.java:225:16: Name 'random_seed_array_padded' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+RSAKey.java:235:16: Name 'message_concat_padding' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+RSAKey.java:238:16: Name 'generator_output' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+RSAKey.java:242:16: Name 'first_xor' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+RSAKey.java:248:16: Name 'hash_first_xor' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+RSAKey.java:253:16: Name 'second_xor' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+RSAKey.java:256:16: Name 'OAEP_evaluated' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+RSAKey.java:260:15: 'return' is not followed by whitespace.
+RSAKey.java:292:16: Name 'hash_of_x' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+RSAKey.java:295:16: Name 'first_xor' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+RSAKey.java:300:16: Name 'random_seed_array_padded' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+RSAKey.java:305:16: Name 'generator_output' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+RSAKey.java:309:16: Name 'second_xor' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+RSAKey.java:312:16: Name 'OAEP_evaluated' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+RSAKey.java:326:16: Name 'padded_input' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+RSAKey.java:329:16: Name 'byte_value_1' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+RSAKey.java:335:16: Name 'byte_value_0' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+RSAKey.java:339:13: Name 'remaining_padding' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+RSAKey.java:343:15: 'return' is not followed by whitespace.
+RSAKey.java:370:15: 'return' is not followed by whitespace.
+RSAKey.java:384:13: Name 'max_num_bytes_message' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+RSAKey.java:398:15: Name 'padded_plain_text' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+RSAKey.java:401:15: Name 'encodeOaep_output' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+RSAKey.java:407:19: Name 'encodeOaep_output_big_integer' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+RSAKey.java:410:19: Name 'encrypted_encodeOaep_output_big_integer' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+RSAKey.java:413:15: Name 'encrypted_encodeOaep_output_byte_array' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+RSAKey.java:428:20: Name 'ciphertext_big_integer' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+RSAKey.java:431:20: Name 'decrypted_ciphertext_big_integer' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+RSAKey.java:434:16: Name 'decrypted_ciphertext_byte_array' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+RSAKey.java:437:16: Name 'decode_decrypted_ciphertext_byte_array' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+RSAKey.java:459:16: Name 'hashed_message' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+RSAKey.java:462:16: Name 'encrypted_hash' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+RSAKey.java:478:16: Name 'hashed_message' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+RSAKey.java:481:16: Name 'decrypted_signature' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+RSAKey.java:497:16: Name 'sampleArray_string' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+RSAKey.java:503:16: Name 'tester_key' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+RSAKey.java:505:16: Name 'padded_tester_key' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+RSAKey.java:506:16: Name 'unpadded_padded' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+KeyExchange.java:8:36: Name 'p' must match pattern '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.
+KeyExchange.java:9:36: Name 'g' must match pattern '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.
+KeyExchange.java:10:23: Name 'size_p' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+KeyExchange.java:10:23: Variable 'size_p' must be private and have accessor methods.
+KeyExchange.java:11:29: Name 'hash_function' must match pattern '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.
+KeyExchange.java:46:16: Name 'p_byte_array' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+KeyExchange.java:53:20: Name 'p_minus_1' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+KeyExchange.java:56:74: '{' is not preceded with whitespace.
+KeyExchange.java:74:20: Name 'outMessage_bigInt' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+KeyExchange.java:76:16: Name 'outMessage_bigInt_byte_array' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+KeyExchange.java:85:20: Name 'p_minus_1' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+KeyExchange.java:88:13: Name 'inMessage_length' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+KeyExchange.java:89:20: Name 'inMessage_big_integer' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+KeyExchange.java:97:20: Name 'inMessage_big_integer_own_key' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+KeyExchange.java:100:16: Name 'inMessage_byte_array_own_key' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+KeyExchange.java:103:16: Name 'hashed_inMessage_byte_array_own_key' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+KeyExchange.java:107:15: 'return' is not followed by whitespace.
+================================================================
+% findbugs *.class
+*-----------------------------------------------------------
+H D ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD ST: Write to static field RSAKey.B1_in_bytes from instance method new RSAKey(BigInteger, BigInteger)  At RSAKey.java:[line 53]
+H D ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD ST: Write to static field RSAKey.B0_in_bytes from instance method new RSAKey(BigInteger, BigInteger)  At RSAKey.java:[line 52]
+M C EC_BAD_ARRAY_COMPARE EC: Using .equals to compare two byte[]'s, (equivalent to ==) in RSAKey.main(String[])  At RSAKey.java:[line 508]
+M D DLS_DEAD_LOCAL_STORE DLS: Dead store to $L2 in RSAKey.giveMessageBlock(byte[])  At RSAKey.java:[line 91]
+M D DLS_DEAD_LOCAL_STORE DLS: Dead store to $L7 in RSAKey.decodeOaep(byte[])  At RSAKey.java:[line 300]
+H I DM_DEFAULT_ENCODING Dm: Found reliance on default encoding in RSAKey.main(String[]): String.getBytes()  At RSAKey.java:[line 498]
+M D ST_WRITE_TO_STATIC_FROM_INSTANCE_METHOD ST: Write to static field KeyExchange.size_p from instance method new KeyExchange(PRGen, boolean)  At KeyExchange.java:[line 47]
+M D DLS_DEAD_LOCAL_STORE DLS: Dead store to $L2 in KeyExchange.prepareOutMessage()  At KeyExchange.java:[line 76]
+M D DLS_DEAD_LOCAL_STORE DLS: Dead store to $L3 in KeyExchange.processInMessage(byte[])  At KeyExchange.java:[line 88]
+M V MS_PKGPROTECT MS: RSAKey.B1_in_bytes should be package protected  In RSAKey.java
+M V MS_PKGPROTECT MS: RSAKey.B0_in_bytes should be package protected  In RSAKey.java
+M V MS_PKGPROTECT MS: KeyExchange.size_p should be package protected  In KeyExchange.java
+Warnings generated: 12
+================================================================
+Testing the APIs of your programs.
+*-----------------------------------------------------------
+================================================================
+******************************************************************************
+*  executing
+******************************************************************************
+Testing methods in RSAKeyPair
+*-----------------------------------------------------------
+Running 3 total tests.
+Test 1: Testing that creating an RSAKeyPair object does not cause an exception or assertion failure.
+  *  Instantiating a reference PRG [you should not submit your PRGen.java]
+  *  Creating RSAKeyPair(prg, 512)
+  *  Creating another RSAKeyPair(prg, 512)
+==> passed
+Test 2: Testing that output of .getPrimes() are both prime
+  *  Testing with 512 bit primes
+  *  Testing with 768 bit primes
+  *  Testing with 1024 bit primes
+==> passed
+Test 3: Testing e, d, and modulus
+  *  Testing with 512 bit primes
+==> passed
+Total: 3/3 tests passed!
+================================================================
+******************************************************************************
+*  compiling
+******************************************************************************
+% javac RSAKeyPair.java
+*-----------------------------------------------------------
+================================================================
+% javac RSAKey.java
+*-----------------------------------------------------------
+================================================================
+% javac KeyExchange.java
+*-----------------------------------------------------------
+================================================================
+******************************************************************************
+*  executing with reference RSAKeyPair
+******************************************************************************
+Testing methods in RSAKey
+*-----------------------------------------------------------
+Running 12 total tests.
+Test 1: Testing that creating an RSAKey object does not cause an exception or assertion failure (test disabled).
+==> passed
+Test 2: Sanity checking that maxPlainTextLength() fails within reasonable bounds (not-shown). Does not guarantee correctness!
+==> passed
+Test 3: Testing that encrypt and decrypt are symmetric on all zeros-array of length maxPlaintextLength().
+  *  Creating public RSAKey using 440 bit key
+  *  public key maxPlaintextLength: 77, private key maxPlaintextLength: 77
+  *  Performing symmetry testing
+    -  Encrypting: ciphertext = publicKey.encrypt(plaintext)
+    -  Decrypting: recovered = privateKey.decrypt(ciphertext)
+     java.lang.AssertionError
+     PRGen.<init>(PRGen.java:49)
+     RSAKey.decodeOaep(RSAKey.java:302)
+     RSAKey.decrypt(RSAKey.java:437)
+     ...
+     TestRSAKey.testEncryptionDecryptionAreSymmetric(TestRSAKey.java:106)
+     TestRSAKey.encryptZerosAndDecryptAreSymmetric(TestRSAKey.java:144)
+     TestRSAKey.main(TestRSAKey.java:979)
+==> FAILED
+  *  Repeating symmetry test 10 more times with the same keys and messages
+     This ensures that your methods work for all outputs of any PRGens you may use.
+     java.lang.AssertionError
+     PRGen.<init>(PRGen.java:49)
+     RSAKey.decodeOaep(RSAKey.java:302)
+     RSAKey.decrypt(RSAKey.java:437)
+     ...
+     TestRSAKey.testEncryptionDecryptionAreSymmetric(TestRSAKey.java:106)
+     TestRSAKey.encryptZerosAndDecryptAreSymmetric(TestRSAKey.java:150)
+     TestRSAKey.main(TestRSAKey.java:979)
+==> FAILED
+     Failure was on 0th trial
+==> FAILED
+    If you're seeing an assertion failure on Dropbox, but not on your local system, make sure you're testing your code with the -ea flag enabled!
+Test 4: Testing that encrypt and decrypt are symmetric on all ones-array [0xFF 0xFF ... 0xFF] of length maxPlaintextLength().
+  *  Creating public RSAKey using 440 bit key
+  *  public key maxPlaintextLength: 77, private key maxPlaintextLength: 77
+  *  Performing symmetry testing
+    -  Encrypting: ciphertext = publicKey.encrypt(plaintext)
+    -  Decrypting: recovered = privateKey.decrypt(ciphertext)
+     java.lang.AssertionError
+     PRGen.<init>(PRGen.java:49)
+     RSAKey.decodeOaep(RSAKey.java:302)
+     RSAKey.decrypt(RSAKey.java:437)
+     ...
+     TestRSAKey.testEncryptionDecryptionAreSymmetric(TestRSAKey.java:106)
+     TestRSAKey.encryptOnesAndDecryptAreSymmetric(TestRSAKey.java:200)
+     TestRSAKey.main(TestRSAKey.java:980)
+==> FAILED
+  *  Repeating symmetry test 10 more times with the same keys and messages
+     This ensures that your methods work for all outputs of any PRGens you may use.
+     java.lang.AssertionError
+     PRGen.<init>(PRGen.java:49)
+     RSAKey.decodeOaep(RSAKey.java:302)
+     RSAKey.decrypt(RSAKey.java:437)
+     ...
+     TestRSAKey.testEncryptionDecryptionAreSymmetric(TestRSAKey.java:106)
+     TestRSAKey.encryptOnesAndDecryptAreSymmetric(TestRSAKey.java:206)
+     TestRSAKey.main(TestRSAKey.java:980)
+==> FAILED
+     Failure was on 0th trial
+==> FAILED
+    If you're seeing an assertion failure on Dropbox, but not on your local system, make sure you're testing your code with the -ea flag enabled!
+Test 5: Testing that encrypt and decrypt are symmetric on arrays of random value and random length
+  *  public key maxPlaintextLength: 77, private key maxPlaintextLength: 77
+  *  Performing 64 tests on plaintexts of lengths between 1 and 38
+     java.lang.AssertionError
+     PRGen.<init>(PRGen.java:49)
+     RSAKey.decodeOaep(RSAKey.java:302)
+     RSAKey.decrypt(RSAKey.java:437)
+     ...
+     TestRSAKey.testEncryptionDecryptionAreSymmetric(TestRSAKey.java:106)
+     TestRSAKey.encryptRandomAndDecryptAreSymmetric(TestRSAKey.java:249)
+     TestRSAKey.main(TestRSAKey.java:981)
+==> FAILED
+     Failure was on 0th trial
+  *  Performing 64 tests on plaintexts of lengths between 1 and 77
+     java.lang.AssertionError
+     PRGen.<init>(PRGen.java:49)
+     RSAKey.decodeOaep(RSAKey.java:302)
+     RSAKey.decrypt(RSAKey.java:437)
+     ...
+     TestRSAKey.testEncryptionDecryptionAreSymmetric(TestRSAKey.java:106)
+     TestRSAKey.encryptRandomAndDecryptAreSymmetric(TestRSAKey.java:264)
+     TestRSAKey.main(TestRSAKey.java:981)
+==> FAILED
+     Failure was on 0th trial
+==> FAILED
+Test 6: Testing that sign and verify are symmetric on arrays of random value and random length
+  *  public key maxPlaintextLength: 77, private key maxPlaintextLength: 77
+  *  Performing 64 tests on plaintexts of lengths between 1 and 38
+     java.lang.AssertionError
+     PRGen.<init>(PRGen.java:49)
+     RSAKey.decodeOaep(RSAKey.java:302)
+     RSAKey.decrypt(RSAKey.java:437)
+     ...
+     RSAKey.verifySignature(RSAKey.java:481)
+     TestRSAKey.signRandomAndVerifySymmetric(TestRSAKey.java:309)
+     TestRSAKey.main(TestRSAKey.java:982)
+==> FAILED
+Test 7: Testing various properties of the output of encrypt
+  *  Testing that output.length is greater >= 2 when encrypting a 1 byte input
+     , output.length was 111
+  *  Testing that output is different when encrypting same 1 byte input twice
+  *  Testing that output value is between 0 and modulus-1 for inputs of random length and content
+  *  Testing that encrypt() gives different output for byte[]{0, 1} and byte[]{1}
+  *  Testing that encrypt() gives different output for byte[]{0, 0, 1} and byte[]{0, 1}
+==> passed
+Test 8: Testing various properties of OAEP output. This test may not be meaningful unless you've passed the tests above.
+   More specific tests are included below
+  *  Testing that OAEP output is greater >= 33 when encrypting a 1 byte input
+     approximateOAEPoutput.length was 111
+  *  Testing that encrypted BigInt is different from decrypted BigInt for a 1 byte input
+  *  Testing that OAEP output is different for byte[]{0, 1} and byte[]{1}
+  *  Testing that OAEP output is >= input.length + 32 when encrypting random length inputs,
+     and that encrypted BigInt is different from decrypted BigInt for same random length inputs
+==> passed
+Test 9: Testing .sign().
+  *  Performing 64 tests on plaintexts of lengths between 1 and 77
+  *  Performing 64 tests on plaintexts of lengths between 1 and 7700
+==> passed
+Test 10: Testing .sign() and verify() are symmetric.
+  *  Validating signatures, 64 tests on plaintexts of lengths between 1 and 77
+     java.lang.AssertionError
+     PRGen.<init>(PRGen.java:49)
+     RSAKey.decodeOaep(RSAKey.java:302)
+     RSAKey.decrypt(RSAKey.java:437)
+     ...
+     RSAKey.verifySignature(RSAKey.java:481)
+     TestRSAKey.testSignAndVerifyAreSymmetric(TestRSAKey.java:677)
+     TestRSAKey.main(TestRSAKey.java:986)
+==> FAILED
+Test 11: Testing various properties of OAEP output using encodeOAEP and decodeOAEP
+    Note: This code assumes a minimum plaintext padding length of 1 during OAEP
+  *  Testing that encodeOAEP and decodeOAEP are inverses
+     java.lang.AssertionError
+     PRGen.<init>(PRGen.java:49)
+     RSAKey.decodeOaep(RSAKey.java:302)
+     TestRSAKey.testRealOAEPproperties(TestRSAKey.java:757)
+     TestRSAKey.main(TestRSAKey.java:987)
+==> FAILED
+Test 12: Testing various properties of message padding using addPadding and removePadding
+  *  Testing that addPadding and removePadding are inverses
+     java.lang.AssertionError
+     RSAKey.removePadding(RSAKey.java:357)
+     TestRSAKey.testPaddingProperties(TestRSAKey.java:867)
+     TestRSAKey.main(TestRSAKey.java:988)
+==> FAILED
+Total: 5/12 tests passed!
+================================================================
+******************************************************************************
+*  executing
+******************************************************************************
+Testing methods in KeyExchange
+*-----------------------------------------------------------
+Running 6 total tests.
+Test 1: Testing that creating a pair of KeyExchange objects does not cause an exception or assertion failure.
+==> passed
+Test 2a: Testing that output is not null for correctly prepared out message.
+==> passed
+Test 2b: Testing that server and client agree on digest value.
+     Failure was on 0th trial
+==> FAILED
+Test 3: Testing that output size matches OUTPUT_SIZE_BYTES.
+==> passed
+Test 4: Testing vulnerability to man in the middle attacks.
+==> passed
+Test 5: Testing that processIn always generates same value for same message.
+==> passed
+Total: 5/6 tests passed!
+================================================================

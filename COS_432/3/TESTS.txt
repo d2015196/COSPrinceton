@@ -1,0 +1,178 @@
+Assessment Summary
+Compilation:  FAILED
+SecureChannel failed to compile, javac reports: 
+SecureChannel.java:233: error: unreported exception IOException; must be caught or declared to be thrown
+        super.sendMessage(message); 
+                         ^
+SecureChannel.java:246: error: unreported exception IOException; must be caught or declared to be thrown
+        super.sendMessage(message); 
+                         ^
+SecureChannel.java:255: error: unreported exception IOException; must be caught or declared to be thrown
+        byte[] message = super.receiveMessage(); 
+                                             ^
+SecureChannel.java:265: error: unreported exception IOException; must be caught or declared to be thrown
+        super.sendMessage(message); 
+                         ^
+SecureChannel.java:274: error: unreported exception IOException; must be caught or declared to be thrown
+        byte[] message = super.receiveMessage(); 
+                                             ^
+SecureChannel.java:278: error: unreported exception IOException; must be caught or declared to be thrown
+        byte[] second_message = super.receiveMessage(); 
+                                                    ^
+6 errors
+Style:        FAILED
+Findbugs:     No potential bugs found.
+API:          PASSED
+Correctness:  0/7 tests passed
+Memory:       No tests available for autograding.
+Timing:       No tests available for autograding.
+Assessment Details
+files submitted
+----------------------------------
+total 168K
+-rw-r-----. 1 5.4K Oct 23 17:10 AuthDecryptor.java
+-rw-r-----. 1 3.7K Oct 23 17:10 AuthEncryptor.java
+-rw-r-----. 1 3.3K Oct 23 17:26 README.txt
+-rw-r-----. 1 9.4K Oct 23 16:58 SecureChannel.java
+******************************************************************************
+*  compiling
+******************************************************************************
+% javac SecureChannel.java
+*-----------------------------------------------------------
+SecureChannel.java:233: error: unreported exception IOException; must be caught or declared to be thrown
+        super.sendMessage(message); 
+                         ^
+SecureChannel.java:246: error: unreported exception IOException; must be caught or declared to be thrown
+        super.sendMessage(message); 
+                         ^
+SecureChannel.java:255: error: unreported exception IOException; must be caught or declared to be thrown
+        byte[] message = super.receiveMessage(); 
+                                             ^
+SecureChannel.java:265: error: unreported exception IOException; must be caught or declared to be thrown
+        super.sendMessage(message); 
+                         ^
+SecureChannel.java:274: error: unreported exception IOException; must be caught or declared to be thrown
+        byte[] message = super.receiveMessage(); 
+                                             ^
+SecureChannel.java:278: error: unreported exception IOException; must be caught or declared to be thrown
+        byte[] second_message = super.receiveMessage(); 
+                                                    ^
+6 errors
+================================================================
+% checkstyle *.java
+*-----------------------------------------------------------
+SecureChannel.java:6:8: Unused import - java.nio.ByteBuffer.
+SecureChannel.java:32:23: Name 'nonce_sending' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+SecureChannel.java:32:23: Variable 'nonce_sending' must be private and have accessor methods.
+SecureChannel.java:35:23: Name 'nonce_receiving' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+SecureChannel.java:35:23: Variable 'nonce_receiving' must be private and have accessor methods.
+SecureChannel.java:38:19: Name 'for_encrypt_key_gen' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+SecureChannel.java:39:19: Name 'for_decrypt_key_gen' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+SecureChannel.java:80:16: Name 'for_seeds' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+SecureChannel.java:83:16: Name 'server_seed' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+SecureChannel.java:87:16: Name 'client_seed' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+SecureChannel.java:91:21: Name 'server_exchange' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+SecureChannel.java:92:21: Name 'client_exchange' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+SecureChannel.java:95:17: Name 'ping_boolean' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+SecureChannel.java:97:26: Expression can be simplified.
+SecureChannel.java:105:16: Name 'shared_key' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+SecureChannel.java:106:16: Name 'first_key_gen_seed' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+SecureChannel.java:107:15: Name 'first_key_gen' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+SecureChannel.java:110:16: Name 'second_key_gen_seed' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+SecureChannel.java:111:15: Name 'second_key_gen' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+SecureChannel.java:118:16: Name 'for_encrypt_key' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+SecureChannel.java:124:16: Name 'for_decrypt_key' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+SecureChannel.java:132:54: Name 'key1_gen' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z]$'.
+SecureChannel.java:132:70: Name 'key2_gen' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z]$'.
+SecureChannel.java:150:82: Name 'server_exchange' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z]$'.
+SecureChannel.java:150:111: Name 'client_exchange' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z]$'.
+SecureChannel.java:152:17: Name 'ping_boolean' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+SecureChannel.java:174:16: Name 'nonce_sending_byte_array' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+SecureChannel.java:175:16: Name 'encrypted_message' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+SecureChannel.java:193:16: Name 'current_nonce_byte_array' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+SecureChannel.java:194:20: Name 'current_nonce' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+SecureChannel.java:196:20: Name 'last_nonce_plus_1' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+SecureChannel.java:208:16: Name 'decrypted_message' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+SecureChannel.java:210:15: 'return' is not followed by whitespace.
+SecureChannel.java:226:18: Name 'client_ping_1' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+SecureChannel.java:226:44: Name 'client_exchange' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z]$'.
+SecureChannel.java:239:18: Name 'server_ping_2' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+SecureChannel.java:239:44: Name 'server_exchange' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z]$'.
+SecureChannel.java:251:18: Name 'server_ping_3' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+SecureChannel.java:251:44: Name 'server_exchange' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z]$'.
+SecureChannel.java:258:16: Name 'shared_key' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+SecureChannel.java:270:21: Name 'client_ping_4' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+SecureChannel.java:270:47: Name 'client_exchange' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z]$'.
+SecureChannel.java:278:16: Name 'second_message' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+SecureChannel.java:281:16: Name 'shared_key' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+================================================================
+% findbugs *.class
+*-----------------------------------------------------------
+================================================================
+Testing the APIs of your programs.
+*-----------------------------------------------------------
+================================================================
+******************************************************************************
+*  executing
+******************************************************************************
+Testing methods in SecureChannel
+*-----------------------------------------------------------
+Running 7 total tests.
+Test 1: Client sends 20 messages, and server echoes them back.
+        Test will succeed if all 20 messages are successfully echoed.
+Exception in thread "Thread-0" Exception in thread "Thread-1" java.lang.NoClassDefFoundError: SecureChannel
+	at TestSecureChannel.run(TestSecureChannel.java:154)
+	at java.lang.Thread.run(Thread.java:748)
+Caused by: java.lang.ClassNotFoundException: SecureChannel
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:335)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 2 more
+java.lang.NoClassDefFoundError: SecureChannel
+	at TestSecureChannel.run(TestSecureChannel.java:154)
+	at java.lang.Thread.run(Thread.java:748)
+==> FAILED, messages sent: 0, messages received: 0
+Test 2: Server sends 20 messages, and client echoes them back.
+        Test will succeed if all 20 messages are successfully echoed.
+Exception in thread "Thread-2" Exception in thread "Thread-3" java.lang.NoClassDefFoundError: SecureChannel
+	at TestSecureChannel.run(TestSecureChannel.java:154)
+	at java.lang.Thread.run(Thread.java:748)
+java.lang.NoClassDefFoundError: SecureChannel
+	at TestSecureChannel.run(TestSecureChannel.java:154)
+	at java.lang.Thread.run(Thread.java:748)
+==> FAILED, messages sent: 0, messages received: 0
+Test 3: Client and server both send 1 message simultaneously.
+Exception in thread "Thread-5" Exception in thread "Thread-4" java.lang.NoClassDefFoundError: SecureChannel
+	at TestSecureChannel.run(TestSecureChannel.java:154)
+	at java.lang.Thread.run(Thread.java:748)
+java.lang.NoClassDefFoundError: SecureChannel
+	at TestSecureChannel.run(TestSecureChannel.java:154)
+	at java.lang.Thread.run(Thread.java:748)
+==> FAILED, well formed message rejected
+Test 4: Server detects reflected message
+Exception in thread "Thread-7" java.lang.NoClassDefFoundError: SecureChannel
+	at TestSecureChannel.run(TestSecureChannel.java:154)
+	at java.lang.Thread.run(Thread.java:748)
+Exception in thread "Thread-6" java.lang.NoClassDefFoundError: SecureChannel
+	at TestSecureChannel.run(TestSecureChannel.java:154)
+	at java.lang.Thread.run(Thread.java:748)
+==> FAILED, accepted a reflected message
+Test 5: Server's messages are sent out of order
+Exception in thread "Thread-9" java.lang.NoClassDefFoundError: SecureChannel
+	at TestSecureChannel.run(TestSecureChannel.java:154)
+	at java.lang.Thread.run(Thread.java:748)
+Exception in thread "Thread-8" java.lang.NoClassDefFoundError: SecureChannel
+	at TestSecureChannel.run(TestSecureChannel.java:154)
+	at java.lang.Thread.run(Thread.java:748)
+==> FAILED, accepted messages in reversed order
+Exception in thread "main" java.lang.NoClassDefFoundError: InsecureChannel$CorruptionType
+	at TestSecureChannel.main(TestSecureChannel.java:490)
+Caused by: java.lang.ClassNotFoundException: InsecureChannel$CorruptionType
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Launcher.java:335)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	... 1 more
+Total: 0/7 tests passed:Test aborted. Ran out of time or crashed before completion.
+================================================================

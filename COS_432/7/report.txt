@@ -1,0 +1,52 @@
+1. 
+
+dromo 
+oodimayo 
+
+2. When one does live analysis the last upate time of certain files is modified as well as bash command history if one uses the terminal. Also login and booting history time stamps are no longer evidence of activity committed by the computer user. 
+
+
+3. 
+
+Ubuntu
+
+4. 
+Virginia: Password to decrypt second partiton, sdm1, and to run the live boot of the machine. Discovered with John the Ripper and wiki-100.txt dictionary. 
+hypocrisy: Password to Bob's account. 
+s'pose : Password to decrypt chatlog1.txt. 
+cos432-staff@cs.princeton.edu : Framer of Bob's crime
+sketchycorp@gmail.com : Framer of Bob's crime
+
+5. 
+
+Gparted: 
+2017/12/07 05:11:50  Bob installed gparted. 
+2017/12/07 05:15:22  System is powering down. 
+2017/12/07 05:16:36  New session Bob
+
+Litecoin: 
+2017/12/07 21:25:30  Bob installed litecoin 
+2017/12/07 21:31:03 Bob installed -y git 
+2017/12/07 22:20:48 Bob installed litecoin-qt 
+
+SSH connection: * 
+2017/12/07 22:24:33 Bob issued command: sudo apt autoremove 
+2017/12/07 23:16:29 command: sudo apt install vsftpd 
+2017/12/07 23:26:08 command: ftp start 
+2017/12/07 23:26:12 command: vsftpd start 
+2017/12/07 23:26:30 command: install openssh-server
+2017/12/07 23:44:34 command: install build-essential
+2017/12/07 23:49:24 command: compile.sh 
+
+* A failed login from this SSH connection was recorded but then a successful one followed. Ports: 43470, 43542. IP (not sure whose it is): 10.8.209.229. 
+
+6. chatlog0.txt, chartlog1.txt, chattlog2.txt found on Bob's machine serve as sufficient evidence that Bob and Alice committed the crime. The image file,, shows a sketch of the Cornell and Dartmouth mascots on their way to the Princeton campus. Thus this image also supports this conclusion. However, msg1.txt.enc reveals that Mallory, along with the Info Sec staff, framed Bob for this crime. 
+
+7. Bob's and Alice's motivation, as framed by Mallory and the Info Sec staff, was their resentment of the mascots at Ivy League schools. On the other hand, the the framer's motivation was to get get Bob locked up for years to come. 
+
+8. Yes. Without considering msg1.txt.enc, Alice and Bob appear to have committed the crime. However msg1.txt.enc confirms that Bob was just framed for the crime by Sketchy Corp and the (sketchier) COS 432 instructors.
+
+
+
+
+

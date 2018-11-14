@@ -1,0 +1,212 @@
+Assessment Summary
+Compilation:  PASSED
+Style:        FAILED
+Findbugs:     Potential bugs found.
+API:          PASSED
+Correctness:  13/13 tests passed
+Memory:       No tests available for autograding.
+Timing:       No tests available for autograding.
+Assessment Details
+files submitted
+----------------------------------
+total 68K
+-rw-r-----. 1 6.7K Sep 27 02:10 PRGen.java
+-rw-r-----. 1 6.1K Sep 27 02:10 StreamCipher.java
+******************************************************************************
+*  compiling
+******************************************************************************
+% javac PRGen.java
+*-----------------------------------------------------------
+================================================================
+% javac StreamCipher.java
+*-----------------------------------------------------------
+================================================================
+% checkstyle *.java
+*-----------------------------------------------------------
+PRGen.java:40:8: Unused import - java.util.Arrays.
+PRGen.java:41:1: Redundant import from the java.lang package - java.lang.Math.
+PRGen.java:59:16: Variable 'prf' must be private and have accessor methods.
+PRGen.java:60:19: Variable 'state' must be private and have accessor methods.
+PRGen.java:75:32: Name 'to_be_fitted' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z]$'.
+PRGen.java:77:16: Name 'to_be_fitted_bitset' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+PRGen.java:79:13: Name 'total_to_clear' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+PRGen.java:80:13: Name 'byte_blocks_clear' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+PRGen.java:81:13: Name 'single_bits_clear' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+PRGen.java:87:13: Name 'end_index' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+PRGen.java:97:13: Name 'fitted_integer' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+PRGen.java:99:15: 'return' is not followed by whitespace.
+PRGen.java:116:13: Name 'output_eval_at_integer' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+PRGen.java:120:16: Name 'output_eval_at' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+PRGen.java:126:13: Name 'output_fitted_integer' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+PRGen.java:130:13: Name 'advance_eval_at_integer' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+PRGen.java:133:16: Name 'advance_eval_at' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+PRGen.java:137:15: 'return' is not followed by whitespace.
+PRGen.java:145:13: Name 'key_int' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+PRGen.java:150:13: Name 'bits_max' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+StreamCipher.java:41:18: Variable 'generator' must be private and have accessor methods.
+StreamCipher.java:54:13: Name 'for_seed' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+StreamCipher.java:86:16: Name 'random_in_byte_array' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+StreamCipher.java:89:14: Name 'random_byte' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+StreamCipher.java:94:15: 'return' is not followed by whitespace.
+StreamCipher.java:120:13: Name 'key_integer' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+StreamCipher.java:126:13: Name 'nonce_integer' must match pattern '^[a-z][a-zA-Z0-9]*$|^[A-Z][A-Z_0-9]*$'.
+================================================================
+% findbugs *.class
+*-----------------------------------------------------------
+M V EI_EXPOSE_REP2 EI2: new PRGen(byte[]) may expose internal representation by storing an externally mutable object into state  At PRGen.java:[line 66]
+Warnings generated: 1
+================================================================
+Testing the APIs of your programs.
+*-----------------------------------------------------------
+================================================================
+******************************************************************************
+*  executing
+******************************************************************************
+Testing methods in PRGen
+*-----------------------------------------------------------
+Running 8 total tests.
+Test 1a-1d: Testing core properties of your PRG
+  *  Output of prg.next() is deterministic
+  *  Output of prg.next() depends on key passed to constructor
+  *  Two consecutive calls to prg.next(32) do not return the same value (2 << 2^32)
+  *  Out of 10 calls to prg.next(32), none return the same value (10 << 2^32)
+==> 4/4 tests passed
+Tests 2a-2d: Testing statistical properties of the output of your PRG
+  *  Testing distribution of 0s and 1s with calls to next(4)
+  *  Testing distribution of 0s and 1s with calls to next(32)
+  *  Testing range of values returned by next(4)
+  *  Testing range of values returned by next(32)
+==> 4/4 tests passed
+Total: 8/8 tests passed!
+Probe 1: Probing to see how your code reacts to weird inputs
+  *  Creating PRG with 0 byte key, then calling .next(32)
+     java.lang.AssertionError
+     PRGen.<init>(PRGen.java:65)
+     TestPRGen.probeEmptyBehavior(TestPRGen.java:299)
+     TestPRGen.main(TestPRGen.java:358)
+  *  Requesting 0 bits using .next(0)
+     java.lang.AssertionError
+     PRGen.next(PRGen.java:110)
+     TestPRGen.probeEmptyBehavior(TestPRGen.java:312)
+     TestPRGen.main(TestPRGen.java:358)
+  *  Requesting 33 bits using .next(33)
+     java.lang.AssertionError
+     PRGen.next(PRGen.java:110)
+     TestPRGen.probeEmptyBehavior(TestPRGen.java:323)
+     TestPRGen.main(TestPRGen.java:358)
+==> Probing completed (no-autograding of results)
+================================================================
+******************************************************************************
+*  compiling
+******************************************************************************
+% javac PRGen.java
+*-----------------------------------------------------------
+================================================================
+% javac StreamCipher.java
+*-----------------------------------------------------------
+StreamCipher.java:33: error: cannot find symbol
+    public static final int BITS_IN_BYTE = PRGen.BITS_IN_BYTE;
+                                                ^
+  symbol:   variable BITS_IN_BYTE
+  location: class PRGen
+StreamCipher.java:34: error: cannot find symbol
+    public static final int BYTES_IN_INTEGER_TYPE  = PRGen.BYTES_IN_INTEGER_TYPE; 
+                                                          ^
+  symbol:   variable BYTES_IN_INTEGER_TYPE
+  location: class PRGen
+2 errors
+================================================================
+******************************************************************************
+*  executing StreamCipher with reference PRGen
+******************************************************************************
+Testing methods in StreamCipher
+*-----------------------------------------------------------
+Running 5 total tests.
+Test 1: Testing distribution of the output of StreamCipher's .cryptByte() method
+  *  Testing that an encrypting StreamCipher generates an even distribution of 0s and 1s for an all 0 input
+  *  Testing that an encrypting StreamCipher generates an even distribution of 0s and 1s for an all 1 input
+  *  Testing that an encrypting StreamCipher generates an even distribution of 0s and 1s for a random bitstream input
+==> passed
+Test 2: Ensure that a decrypting StreamCipher can use .cryptByte() to correctly decrypt the output of an encrypting StreamCipher
+==> passed
+Test 3: Testing distribution of the output of StreamCipher's .cryptBytes() method
+  *  Testing that an encrypting StreamCipher generates an even distribution of 0s and 1s for an all 0 input
+  *  Testing that an encrypting StreamCipher generates an even distribution of 0s and 1s for an all 1 input
+  *  Testing that an encrypting StreamCipher generates an even distribution of 0s and 1s for a random bitstream input
+==> passed
+Test 4: Ensure that a decrypting StreamCipher can use .cryptBytes() to correctly decrypt the output of an encrypting StreamCipher
+==> passed
+Test 5: Ensure that cryptBytes returns different values for different nonces
+==> passed
+Total: 5/5 tests passed!
+Probe 1: Testing how your code reacts to weird inputs
+  *  Creating StreamCipher with 0 byte key, then calling .cryptByte(127)
+     java.lang.AssertionError
+     StreamCipher.<init>(StreamCipher.java:46)
+     StreamCipher.<init>(StreamCipher.java:69)
+     TestStreamCipher.probeEmptyBehavior(TestStreamCipher.java:391)
+     TestStreamCipher.main(TestStreamCipher.java:434)
+  *  Creating StreamCipher with a good key, then calling .cryptBytes() with zero length inbuf and numBytes=1
+     java.lang.AssertionError
+     StreamCipher.cryptBytes(StreamCipher.java:106)
+     TestStreamCipher.probeEmptyBehavior(TestStreamCipher.java:405)
+     TestStreamCipher.main(TestStreamCipher.java:434)
+==> Probing completed (no-autograding of results)
+================================================================
+******************************************************************************
+*  compiling
+******************************************************************************
+% javac PRGen.java
+*-----------------------------------------------------------
+================================================================
+% javac StreamCipher.java
+*-----------------------------------------------------------
+================================================================
+******************************************************************************
+*  executing AuthEncryptor and AuthDecryptor with reference PRGen and reference StreamCipher
+******************************************************************************
+Testing methods in AuthEncryptor
+*-----------------------------------------------------------
+Running 5 total tests.
+Test 1: Testing distribution of the output of AuthEncryptor's .encrypt() method
+  *  Testing that AuthEncryptor's encrypt() method generates an even distribution of 0s and 1s for an all 0 input
+  *  Testing that AuthEncryptor's encrypt() method  generates an even distribution of 0s and 1s for an all 1 input
+  *  Testing that AuthEncryptor's encrypt() method  generates an even distribution of 0s and 1s for a random bitstream input
+==> passed
+Test 2: Ensuring that the output of your AuthEncryptor is larger when input is larger with same nonce
+==> passed
+Test 3: Ensuring that two calls to .encrypt(inputData) with the same inputData and a different Nonce does not return the same output.
+==> passed
+Test 4: Ensuring that the output of your AuthEncryptor is larger than the input (as a proxy for existence of MAC)
+==> passed
+Test 5: Ensuring that the length of AuthEncryptor output with nonce == AuthEncryptor without nonce + nonce size
+==> passed
+Total: 5/5 tests passed!
+Probe 1: Probing to see how your code reacts to weird inputs
+  *  Creating AuthEncryptor with 0 byte key, then calling .encrypt(new byte[]{5, 6})
+     java.lang.AssertionError
+     AuthEncryptor.<init>(AuthEncryptor.java:25)
+     TestAuthEncryptor.probeEmptyBehavior(TestAuthEncryptor.java:290)
+     TestAuthEncryptor.main(TestAuthEncryptor.java:339)
+  *  Creating AuthEncryptor with a good key, then calling .encrypt() on an empty input stream
+     Output byte stream address is [B@2ff4acd0
+     Output byte stream length is 32
+     Output[0] is 106
+==> Probing completed (no-autograding of results)
+================================================================
+Testing methods in AuthDecryptor
+*-----------------------------------------------------------
+Running 4 total tests.
+Test 1: Ensuring that your AuthDecryptor can correctly Decrypt a single message that was encrypted by your AuthEncryptor class
+==> passed
+Test 2: Ensuring that your AuthDecryptor can correctly Decrypt a sequence of 16 messages created by your AuthEncryptor class
+==> passed
+Test 3: Ensuring that your AuthDecryptor returns null if something goes wrong
+  *  Returns null if Decryptor has incorrect key
+  *  checking if decryption returns null when an incorrect Nonce is provided
+==> passed
+Test 4: Ensuring that your AuthDecryptor handles nonces correctly
+ * Same decryption value whether or not includeNonce is used
+==> passed
+Total: 4/4 tests passed!
+================================================================

