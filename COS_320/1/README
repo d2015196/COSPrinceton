@@ -1,0 +1,19 @@
+Help: 
+
+Although I worked on the solution for nested comments I was led by a few resources. I first googled nested comments in general and read that there existed no regular experession that could accommodate nested comments. That is when I was led to the "scanner" feature of flex. I visited this webpage: 
+	
+	http://people.cs.aau.dk/~marius/sw/flex/Start-Conditions.html
+	
+	Then I researched states in flex. In particular I viewed this example on page 28-30 of the book: 
+	
+	http://web.iitd.ac.in/~sumeet/flex__bison.pdf
+	
+I also consulted: http://flint.cs.yale.edu/cs421/lectureNotes/c02.pdf 
+
+Sotiris helped me with an answer to my Piazza question. 
+
+Notes: 
+
+For more than I tried I could not get the hyphen character to the list of the valid single characters. I copied the exact same character from input text file "all.fun" into this list but for some reason the hyphen was still read as an invalid character. 
+
+ 

@@ -1,0 +1,3 @@
+The assignment got us to directly work with what we learned in class. I really liked it. I would change the assignment speculation a bit since I found it confusing to see an explanation of the semantics on the first page of the assignment. I feel like this should be explained after indicating how we should write the grammar. That would have been clearer. 
+
+I got help from Sotiris. I discussed my shift-reduce question posted on Piazza with Fei Gao. Also Benjamin Huang told me about the "fun.output" file to fix shift-reduce errors and about what could be the error for a segmentation fault (i.e passing NULL pointer to one of the AST classes).   
